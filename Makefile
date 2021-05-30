@@ -2,7 +2,7 @@ CONFIG_MODULE_SIG=n
 
 obj-m := driver.o
 
-KDIR := /usr/src/linux-headers-5.8.0-49-generic
+KDIR := /lib/modules/$(shell uname -r)/build
 
 PWD := $(shell pwd)
 
