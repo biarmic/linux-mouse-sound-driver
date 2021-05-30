@@ -61,8 +61,15 @@ biarmic@ubuntu:~$ ls /sys/bus/usb/devices
 2-0:1.0  2-1:1.0  2-2.1  2-2.1:1.0  2-2.2      2-2.2:1.1  2-2.3:1.0  usb1
 ```
 
-Then, run the following commands to unbind your mouse from the default device driver (**usbhid**) and bind it to the new
-device driver (**usbmouse**). You need **superuser** privileges to be able to do it.
+Then, run the following script to unbind your mouse from the default device driver (**usbhid**) and bind it to the
+new device driver (**usbmouse**).
+
+```console
+biarmic@ubuntu:~$ sudo bash bind.sh 2-2.3:1.0
+```
+
+Alternatively, you can rebind your mouse with the following commands. You need **superuser** privileges to be able
+run these commands.
 
 ```console
 biarmic@ubuntu:~$ sudo su
